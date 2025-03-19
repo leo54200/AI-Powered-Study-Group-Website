@@ -1,0 +1,142 @@
+body{
+    overflow-y: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+#sign_in_div {
+    max-height: 86%;
+    width: 40%;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    border: solid 3px;
+    padding: 1.6em 2.2em;
+    color: #000000;
+    z-index: 1;
+}
+
+#sign_in_form {
+    width: 80%;
+    margin: auto;
+}
+
+.tf {
+    height: 500px;
+    width: 370px;
+    border-radius: 50px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border: solid 3px;
+    padding: 25px 30px;
+    color: #000000;
+    top: 50%;
+    margin-top: -250px;
+    left: 50%;
+    margin-left: -185px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.th {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0.6em;
+}
+input {
+    width: 100%;
+    padding: 0.4em;
+    font-size: 1em;
+    border: outset 3px;
+    outline: none;
+    border-radius: 12px;
+    margin: 0.6em 0em;
+}
+.tl {
+    width: 100%;
+    font-size: 1.2em;
+}
+.tb {
+    align-items: center;
+    color: white;
+    width: 90%;
+    padding: 0.6em;
+    font-size: 1.2em;
+    outline: none;
+    border: outset 3px;
+    background-color: rgb(22, 62, 196);
+    border-radius: 14px;
+    margin-left: 5%;
+    margin-top: 0.6em;
+}
+.tb:hover {
+    background-color: rgb(22, 62, 196);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.error {
+    background: #f2dede;
+    color: #a94442;
+    text-align: center;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1em;
+}
+
+.success {
+    background: #a3a9e37c;
+    color: #4255ff;
+    text-align: center;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1em;
+}
+
+.flex_container {
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex_item {
+    font-size: 0.8em;
+    cursor: pointer;
+    width: fit-content;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.selected {
+    background-color: #93bedf;
+}
+@media (max-width: 1200px) {
+    #sign_in_div {
+        width: 50%;
+    }
+}
+@media (max-width: 900px) {
+    #sign_in_div {
+        width: 60%;
+    }
+}
+@media (max-width: 700px) {
+    #sign_in_div {
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    #sign_in_div {
+        width: 80%;
+    }
+}
+@media (max-width: 400px) {
+    #sign_in_div {
+        width: fit-content;
+    }
+}

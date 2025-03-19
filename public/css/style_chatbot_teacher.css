@@ -1,0 +1,529 @@
+main {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #343541;
+    color: #ffffff;
+}
+
+label {
+    color: white;
+}
+
+select {
+    width: 10%;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.flex_container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex_item {
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 10%;
+    border: 2px solid white;
+}
+
+.selected {
+    background-color: #5b5e71;
+}
+
+#enter {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: transparent;
+    margin-top: 20px;
+    margin: auto;
+    min-width: 12%;
+    padding: 10px 20px;
+    border: 2px solid white;
+    width: fit-content;
+}
+
+.chat-box {
+    max-height: 100%;
+    padding-bottom: 150px;
+}
+
+.default-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    padding: 0 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.default-text h1 {
+    font-size: 3.3em;
+}
+
+.default-text p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.higher{
+    height: 150px;
+}
+
+.chat-box .chat {
+    padding: 25px 10px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.chat-box .chat.outgoing {
+    background-color: transparent;
+}
+
+.chat-box .chat.incoming {
+    background: #444654;
+}
+
+.chat .chat-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.chat-content .chat-buttons {
+    justify-content: flex-end;
+}
+
+span.material-symbols-rounded {
+    user-select: none;
+    cursor: pointer;
+}
+
+span.material-symbols-outlined {
+    user-select: none;
+    cursor: pointer;
+}
+
+.edit-box {
+    position: relative;
+    float: right;
+    padding: 10px 20px 10px;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 50vw;
+    max-width: 800px;
+}
+
+.edit-box textarea {
+    height: 300px;
+    width: 100%;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.edit-box button,
+.edit-box #submit {
+    cursor: pointer;
+}
+
+.edit-box #submit:hover {
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.rating-box {
+    position: relative;
+    float: right;
+    width: min-content;
+    padding: 10px 50px 25px;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.rating-box label {
+    font-size: 20px;
+    padding-top: 20px;
+    color: #ff9c1a;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rating-box button {
+    font-size: 20px;
+    color: #ff9c1a;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.rating-box .stars1,
+.stars2 {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.stars1 i,
+.stars2 i {
+    color: #e6e6e6;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars1 i:hover,
+.stars2 i:hover {
+    color: #ff9c1a;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.stars1 i.active,
+.stars2 i.active {
+    color: #ff9c1a;
+}
+
+.chat .chat-content span {
+    cursor: pointer;
+    font-size: 1.3em;
+    color: #acacbe;
+    visibility: hidden;
+}
+
+.chat:hover .chat-content:not(:has(.typing-animation), :has(.error)) span {
+    visibility: visible;
+}
+
+.chat .chat-details {
+    display: flex;
+    align-items: center;
+}
+
+.chat .chat-details img {
+    width: 40px;
+    height: 40px;
+    align-self: flex-start;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.chat .chat-details p {
+    white-space: pre-wrap;
+    font-size: 1.05em;
+    padding: 0 50px 0 25px;
+    color: #ffffff;
+    word-break: break-word;
+}
+
+.chat .chat-details p.error {
+    color: #e55865;
+}
+
+.chat .typing-animation {
+    padding-left: 25px;
+    display: inline-flex;
+}
+
+.typing-animation .typing-dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    margin: 0 3px;
+    opacity: 0.7;
+    background: #ffffff;
+    animation: animateDots 1.5s var(--delay) ease-in-out infinite;
+}
+
+.typing-animation .typing-dot:first-child {
+    margin-left: 0;
+}
+
+@keyframes animateDots {
+    0%,
+    44% {
+        transform: translateY(0px);
+    }
+    28% {
+        opacity: 0.4;
+        transform: translateY(-6px);
+    }
+    44% {
+        opacity: 0.2;
+    }
+}
+
+.typing-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 10px;
+
+    display: flex;
+    justify-content: center;
+
+    background: #343541;
+    border-top: 1px solid #444654;
+}
+
+.typing-box .typing-content {
+    display: flex;
+    max-width: 950px;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.typing-textarea {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+textarea {
+    resize: none;
+    height: 55px;
+    width: 100%;
+    border: none;
+    padding: 15px 45px 15px 20px;
+    color: #ffffff;
+    font-size: 1em;
+    border-radius: 4px;
+    max-height: 250px;
+    overflow-y: auto;
+    background: #444654;
+    outline: 1px solid #444654;
+}
+
+textarea:focus {
+    border: 2px solid white;
+}
+
+textarea::placeholder {
+    color: #dcdcdc;
+}
+
+.typing-content span {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    border-radius: 4px;
+    font-size: 1.35em;
+    align-items: center;
+    justify-content: center;
+    color: #acacbe;
+}
+
+.typing-textarea span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    visibility: hidden; 
+}
+
+.typing-textarea textarea:valid ~ span {
+    visibility: visible;
+}
+
+
+.typing-controls {
+    display: flex;
+}
+
+.typing-controls span {
+    margin-left: 7px;
+    font-size: 1.4em;
+    background: #444654;
+    outline: 1px solid #444654;
+}
+
+.typing-controls span:hover {
+    background: #5b5e71;
+}
+
+.correctionBox {
+    font-style: italic;
+}
+
+#selected_items {
+    margin-top: 0.4em;
+}
+@media (max-width: 500px) {
+    .default-text h1 {
+        font-size: 2.3em;
+    }
+    :where(.default-text p, textarea, .chat p) {
+        font-size: 0.95em !important;
+    }
+    .chat-box .chat {
+        padding: 20px 10px;
+    }
+    .chat-box .chat img {
+        height: 32px;
+        width: 32px;
+    }
+    .chat-box .chat p {
+        padding: 0 20px;
+    }
+    .chat .chat-content:not(:has(.typing-animation), :has(.error)) span {
+        visibility: visible;
+    }
+    .typing-box {
+        padding: 15px 10px;
+    }
+    .typing-textarea textarea {
+        height: 45px;
+        padding: 10px 40px 10px 10px;
+    }
+    .typing-content span {
+        height: 45px;
+        width: 45px;
+        margin-left: 5px;
+    }
+    span.material-symbols-rounded {
+        font-size: 1.25em !important;
+    }
+}
+
+span.material-symbols-rounded {
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    box-sizing: border-box;
+}
+
+body.light {
+    background-color: #ffffff;
+}
+
+.light h3,
+.light h4 {
+    color: #000000;
+}
+.light .flex_item,
+.light #enter {
+    border-color: #000000;
+}
+.light .selected {
+    background-color: #cfcfcf;
+}
+.light .checkbox-label {
+    background-color: #ffffff;
+}
+.light .checkbox-label .ball {
+    background-color: #000000;
+}
+.light .typing-box {
+    background-color: #ffffff;
+}
+.light textarea {
+    background-color: #ededed;
+    color: #000000;
+}
+.light textarea:focus {
+    border: 2px solid rgb(0, 0, 0);
+}
+.light .chat-input {
+    color: #000000;
+}
+.light textarea::placeholder {
+    color: #343541;
+}
+.light span.material-symbols-rounded {
+    background-color: #ededed;
+    color: #343541;
+}
+.light .chat p {
+    color: #000000;
+}
+.light .chat-box .chat.incoming {
+    background-color: #ededed;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #343541;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+.light #switch_in_menu .ball {
+    transform: translateX(24px);
+}
+#switch_in_menu {
+    z-index: 1;
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+
+@media (max-width: 750px) {
+    #switch_in_menu {
+        left: auto;
+        right: 20px;
+    }
+}

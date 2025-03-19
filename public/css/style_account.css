@@ -1,0 +1,20 @@
+body{
+    margin-left: 30px;
+    background-color: rgb(234, 234, 234);
+}
+
+.error {
+    color: #a94442;
+    border-radius: 12px;
+    font-size: 1em;
+}
+
+.success {
+    color: #4255ff;
+    border-radius: 12px;
+    font-size: 1em;
+}
+#freccia_indietro{
+    margin-top: 20px;
+width:50px;
+}

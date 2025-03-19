@@ -1,0 +1,39 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+#usersContainer{
+    background-color: white;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.user-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.user-table td {
+    text-align: center;
+}
+
+.user-table button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.user-table button:hover {
+    background-color: #ddd;
+}

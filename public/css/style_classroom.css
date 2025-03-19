@@ -1,0 +1,184 @@
+#flexcontainer_guys {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  bottom: 0px;
+}
+
+#chat {
+  display: inline-block;
+  width: 58%;
+  margin-bottom: 0px;
+}
+
+.speech_bubble {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 15px;
+  padding: 10px;
+  width: auto;
+  max-width: 90%;
+  margin: 8px auto;
+  border: 2px solid #000;
+}
+
+.speech_bubble:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid;
+}
+.speech_bubble_center_bottom:after {
+  border-top-color: #000;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.speech_bubble_left_bottom:after {
+  border-top-color: #000;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  top: 100%;
+  left: 10%;
+}
+
+.speech_bubble_right_bottom:after {
+  border-top-color: #000;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  top: 100%;
+  right: 10%;
+}
+
+.no_after:after {
+  content: none;
+}
+
+#bar {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 95%;
+  border: 2px solid black;
+  text-align: start;
+  padding: 4px 0px;
+}
+#students {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 95%;
+  margin-top: 30px;
+  text-align: start;
+}
+.guy {
+  width: 30%;
+}
+.guy1_3 {
+  width: 30%;
+}
+
+#table {
+  background-color: rgb(83, 64, 3);
+  margin: auto;
+  margin-bottom: 5px;
+  height: 2.5em;
+  width: 90%;
+  border-radius: 1em 1em 0em 0em;
+}
+
+#history_box {
+  max-height: 80vh;
+  overflow-y: auto;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.09);
+  width: 40%;
+  margin-bottom: 0;
+  border: 2px solid black;
+}
+
+.history_box_title {
+  text-align: center;
+  font-weight: bold;
+  padding: 18px;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 0;
+}
+.right {
+  margin-left: auto;
+  text-align: left;
+  background-color: #93bedf;
+  width: fit-content;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.left {
+  margin-right: auto;
+  text-align: left;
+  background-color: hsla(206, 54%, 73%, 0.4);
+  width: fit-content;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.username {
+  font-size: 0.7em;
+  font-weight: lighter;
+  padding: 0px;
+}
+
+#next_button {
+  margin: auto;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+  border: outset 3px;
+  width: 32vw;
+  height: 10vh;
+  background-color: #4255ff;
+  color: white;
+  font-size: 1em;
+}
+#next_button:hover {
+  background-color: #3a4cd6;
+}
+#input_message {
+  width: 90%;
+  padding: 0.6em;
+  font-size: 0.9em;
+  border: outset 3px;
+  outline: none;
+  border-radius: 12px;
+  margin: 0.5em 0em;
+  box-sizing: border-box;
+  line-height: 2em;
+  resize: none; 
+  overflow: hidden;
+}
+#input_message:focus {
+  padding: 0.5em;
+  border: outset 4px rgb(0, 0, 0);
+}
+
+#submit_message {
+  font-size: 2em;
+  border: outset 3px;
+}
+#submit_message:hover {
+  background-color: #adadad;
+}
